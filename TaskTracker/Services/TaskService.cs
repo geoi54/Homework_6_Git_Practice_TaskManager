@@ -105,6 +105,10 @@ namespace TaskTracker.Services
     int done = GetTasksByStatus(TaskStatus.Done).Count;
     return (total, newTasks, inProgress, done);
 }
+        public List<TaskItem> GetTasksByPriority(TaskPriority priority)
+{
+    return tasks.Where(t => t.Priority == priority).ToList();
+}
 
     }
 }
