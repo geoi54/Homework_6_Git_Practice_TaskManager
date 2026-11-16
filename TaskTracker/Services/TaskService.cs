@@ -79,5 +79,10 @@ namespace TaskTracker.Services
         {
             return tasks.Count;
         }
+        public List<TaskItem> GetTasksByPriority(TaskPriority priority)
+{
+    return tasks.Where(t => t.Priority == priority).ToList();
+}
+
     }
 }
